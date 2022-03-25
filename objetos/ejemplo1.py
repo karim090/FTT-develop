@@ -1,26 +1,43 @@
-class Employee:
-    first_name = None
-    last_name = None
-    salario= None
+# de esta forma definimos un objeto o clase en python.
+class Objeto:
+    atributo1 = None
+    atributo2 = None
 
-    def __init__(cls, n, ln):
-        cls.first_name = n
-        cls.last_name = ln
+# asi podemos instanciar un objeto y darle valores a sus atributos
 
-    def get_email(cls):
-        return cls.first_name + cls.last_name + "@craftech.io"
-
-    def calculate_salary(cls):
-        return cls.salario
-
-    def get_data(cls):
-        return cls.calculate_salary() + cls.get_email()
+objecto = Objeto()
+objecto.atributo1 = "attr1"
+objecto.atributo2 = "attr2"
 
 
+# tambien podemos tener funciones de clase propias
 
-full_name = input("Ingresa tu nombre y apellido: ")
-input_name = full_name.split(" ")[0]
-input_last_name = full_name.split(" ")[1]
+class Objeto:
+    atributo1 = None
+    atributo2 = None
 
-k = Employee(input_name, input_last_name)
-print(k.get_data())
+    def funcion1():
+        print("esta es la funcion 1")
+
+# vamos a instanciar el objeto y usar su funcion
+
+
+objecto = Objeto()
+objecto.funcion1()
+
+
+
+# los objetos tienen un constructor __init__ es una funcion q se ejecuta al crearse una instancia de este
+# este se usa para pasarle argumentos al momento de instanciar el objeto
+
+class Objeto:
+    atributo1 = None
+
+    def __init__(self, argumento1):
+        self.atributo1 = argumento1
+
+
+# asi instanciamos el objeto dandole su argumento y luego podemos utilizar su atributo con el valor asignado
+
+objecto = Objeto("prueba 1")
+print(objecto.atributo1)
